@@ -3,6 +3,14 @@ export default function handler(req, res) {
         return res.status(405).json({ error: "Method Not Allowed" });
     }
 
+export default function handler(req, res) {
+    if (req.method !== "POST") {
+        return res.status(405).json({ error: "Method Not Allowed" });
+    }
+
+    // Token validation and transaction processing code here...
+
+
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
         return res.status(401).json({ error: "Unauthorized: Missing or Invalid Token" });
