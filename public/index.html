@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiate Transfer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #0056b3; }
+        button {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover { background-color: #0056b3; }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            white-space: pre-wrap; /* Preserve whitespace and breaks */
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #ced4da;
+            max-height: 400px; /* Limit height for long outputs */
+            overflow-y: auto; /* Enable scrolling if content overflows */
+        }
+        .error { color: red; font-weight: bold; }
+        .success { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulated Transfer Initiator</h1>
+        <p>Click the button below to trigger a simulated transfer of 20,000,000 for each predefined hash.</p>
+        <button id="transferButton">Trigger Simulated Transfers</button>
+        <div class="output">
+            <p><strong>Response:</strong></p>
+            <pre id="responseOutput"></pre>
+        </div>
+        <p><strong>Important:</strong> This is currently a simulated transfer for demonstration purposes only. It does not involve real money or real financial transactions until you integrate a third-party payment API into `api/index.js`.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

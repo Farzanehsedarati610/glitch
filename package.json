@@ -1,0 +1,19 @@
+{
+  "name": "real-transfer-app-placeholder",
+  "version": "1.0.0",
+  "description": "A web app to trigger transfers via an Express backend on Vercel (requires real API integration).",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "author": "Your Name/Organization",
+  "license": "ISC"
+}
