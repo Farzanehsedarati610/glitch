@@ -21,7 +21,7 @@ export default function handler(req, res) {
     }
 
     // Convert SHA-256 hash to byte segments for 8086 processing
-    const byteChunks = hash.match(/.{1,2}/g); // Split into 1-byte pieces
+    const byteChunks = hash.match(/.{1,2}/g);
     const hexAmount = Number(amount).toString(16).padStart(4, '0');
 
     res.json({ instruction: `MOV SI, OFFSET ${byteChunks.join(" ")}; MOV AX, ${hexAmount}` });
