@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (const hash of HASHES) {
             try {
-                const response = await fetch('/transfer', { // Will route to api/index.js on Vercel
+                const response = await fetch('/api/transfer', { // Now correctly routes to api/index.js via Vercel's rewrite
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
